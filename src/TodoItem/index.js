@@ -1,4 +1,8 @@
 import React from 'react';
+import { FaGithub } from 'react-icons/fa';
+import { BsCheckSquare } from 'react-icons/bs';
+import { TiDelete } from 'react-icons/ti';
+
 import './TodoItem.css';
 
 function TodoItem(props) {
@@ -10,7 +14,7 @@ function TodoItem(props) {
             className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
             onClick={props.onComplete}
         >
-            √
+            <BsCheckSquare />
         </span>
         <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
             {props.text}
@@ -19,7 +23,7 @@ function TodoItem(props) {
             className="Icon Icon-delete"
             onClick={props.onDelete}
         >
-            X
+            <TiDelete />
         </span>
         </li>
     );
