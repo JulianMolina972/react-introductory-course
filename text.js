@@ -32,9 +32,15 @@
 // console.log(solution(['diamonds', 'hearts', 'spades', 'AS']));
 
 
-function solution(words) {
-	const rta = words.findIndex(word => word === 'myKey') 
-	return (rta === -1) ? false: rta ;
+// function solution(words) {
+// 	const rta = words.findIndex(word => word === 'myKey') 
+// 	return (rta === -1) ? false: rta ;
+// }; 
+
+// console.log(solution(["diamonds", "hearts", "spades","myKey"]));
+
+function solution(title) {
+	return title.replaceAll(' ', '-').toLowerCase();
 }; 
 
-console.log(solution(["diamonds", "hearts", "spades","myKey"]));
+console.log(solution("La API para nunca parar de aprender"));
