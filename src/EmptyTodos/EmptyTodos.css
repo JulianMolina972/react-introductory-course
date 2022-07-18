@@ -1,0 +1,18 @@
+.emptyTodos {
+  text-align: center;
+}
+
+
+.emptyTodos p {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-top: 50px ;
+}
+
+.emptyTodos img {
+  border-radius: 20px;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+
+}
