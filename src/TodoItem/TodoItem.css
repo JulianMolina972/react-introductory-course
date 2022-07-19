@@ -9,11 +9,13 @@
 }
 
 .TodoItem-p {
-  margin: 24px 0 24px 24px;
+  margin: 24px -100px 24px -62px;
   width: calc(100% - 120px);
   font-size: 18px;
   line-height: 24px;
   font-weight: 400;
+  overflow-wrap: anywhere;
+  ;
 }
 .TodoItem-p--complete {
   text-decoration: line-through;
@@ -48,5 +50,13 @@
 }
 .Icon-delete:hover {
   color: red;
+  
+}
+
+
+@media (min-width: 1025px) {
+  .TodoItem-p {
+    font-size: 2.5rem;
+  }
   
 }

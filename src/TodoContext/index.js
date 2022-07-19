@@ -40,7 +40,7 @@ function TodoProvider(props) {
     const newTodos = [...todos];
     newTodos.push({
       completed: false,
-      text: text,
+      text,
     });
     saveTodos(newTodos);
   }
@@ -74,4 +74,4 @@ function TodoProvider(props) {
   )
 }
 
-export { TodoProvider, TodoContext };
+export {  TodoContext, TodoProvider };

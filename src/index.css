@@ -21,3 +21,16 @@ body {
   position: relative;
   min-height: 100vh;
 }
+
+
+@media (min-width: 1025px) {
+  #root {
+    margin: 10px auto;
+    padding: 0 23px;
+    max-width: 900px;
+    border: 3px solid rgb(151, 151, 218);
+    border-radius: 30px;
+    box-shadow: 9px 10px 17px 1px #9e9bcf;
+  }
+  
+}

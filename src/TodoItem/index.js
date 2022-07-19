@@ -1,5 +1,4 @@
 import React from 'react';
-import { FaGithub } from 'react-icons/fa';
 import { BsCheckSquare } from 'react-icons/bs';
 import { TiDelete } from 'react-icons/ti';
 
@@ -16,7 +15,7 @@ function TodoItem(props) {
         >
             <BsCheckSquare />
         </span>
-        <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
+        <p  className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
             {props.text}
         </p>
         <span 
