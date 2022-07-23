@@ -44,3 +44,24 @@ function solution(title) {
 }; 
 
 console.log(solution("La API para nunca parar de aprender"));
+
+
+function solution(orders){
+	return orders
+		.map(order => order.total)
+		.reduce((count, item) => count + item, 0
+	);
+}; 
+
+console.log(solution([
+  {
+    customerName: "Nicolas",
+    total: 100,
+    delivered: true,
+  },
+  {
+    customerName: "Zulema",
+    total: 120,
+    delivered: false,
+  },
+]));
