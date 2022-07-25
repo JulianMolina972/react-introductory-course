@@ -5,12 +5,12 @@ import { TodoCounter } from "../TodoCounter";
 import { TodoSearch } from "../TodoSearch";
 import { TodoList } from "../TodoList";
 import { TodoItem } from "../TodoItem";
-import {TodosError} from "../TodosError";
+import { TodosError } from "../TodosError";
 import { TodoForm } from "../TodoForm";
-import {TodosLoading} from "../TodosLoading";
-import {EmptyTodos} from "../EmptyTodos";
+import { TodosLoading } from "../TodosLoading";
+import { EmptyTodos } from "../EmptyTodos";
 import { CreateTodoButton } from "../CreateTodoButton";
-import {Modal} from "../Modal";
+import { Modal } from "../Modal";
 import { ChangeAlert } from "../ChangeAlert";
 
 
