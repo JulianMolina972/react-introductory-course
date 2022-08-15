@@ -1,4 +1,5 @@
 import React from "react";
+import { FcTodoList } from "react-icons/fc";
 import './EmptyTodos.css';
 
 
@@ -6,7 +7,7 @@ function EmptyTodos() {
   return (
     <div className="emptyTodos">
       <p>Create your first TODO!</p>
-      <img src="https://source.unsplash.com/random/200x200?sig=1" alt="ramdom" />
+      <FcTodoList className="emptyTodos-icon"/>
     </div>
   )
 }

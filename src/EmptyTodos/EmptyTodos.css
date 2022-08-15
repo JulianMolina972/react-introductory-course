@@ -2,17 +2,15 @@
   text-align: center;
 }
 
-
 .emptyTodos p {
   font-size: 3rem;
   font-weight: 500;
   margin-top: 50px ;
 }
 
-.emptyTodos img {
-  border-radius: 20px;
+.emptyTodos-icon {
   width: 150px;
   height: 150px;
+  border-radius: 20px;
   margin: 20px auto;
-
 }

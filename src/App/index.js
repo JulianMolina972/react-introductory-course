@@ -12,6 +12,7 @@ import { EmptyTodos } from "../EmptyTodos";
 import { CreateTodoButton } from "../CreateTodoButton";
 import { Modal } from "../Modal";
 import { ChangeAlert } from "../ChangeAlert";
+import { EmptySearch } from "../EmptySearch";
 
 
 function App() {
@@ -55,7 +56,7 @@ function App() {
         onError= {() => <TodosError />} 
         onLoading= {() => <TodosLoading />}
         onEmptyTodos= {() => <EmptyTodos />} 
-        onEmptySearchResults= {(searchText) => <p>There isn't results to {searchText}</p>} 
+        onEmptySearchResults= {(searchText) =>  <EmptySearch  searchText={searchText}/> } 
         render={todo => (
           <TodoItem 
             key={todo.text} 
