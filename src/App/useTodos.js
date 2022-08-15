@@ -15,6 +15,7 @@ function useTodos() {
 
   const [searchValue, setSearchValue] = React.useState('');
   const [openModal, setOpenModal] = React.useState(false);
+  const [completeCheck, setCompleteCheck] = React.useState(false);
 
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
@@ -30,10 +31,17 @@ function useTodos() {
 
 
   const completeTodo = (text) => {
+
+    console.log(text);
+  
     const todosIndex = todos.findIndex(todo => todo.text === text);
+    console.log(todosIndex);
     const newTodos = [...todos];
     newTodos[todosIndex].completed = !newTodos[todosIndex].completed;
     saveTodos(newTodos);
+
+    // check.setCompleteCheck(prevState => !prevState);
+    // newTodos[todosIndex].completed = false;
   }
 
   const addTodo = (text) => {
@@ -53,23 +61,29 @@ function useTodos() {
     saveTodos(newTodos);
   }
 
-  return {
+  const states = {
     loading,
     error,
     totalTodos,
     completedTodos,
     searchValue,
-    setSearchValue,
     searchedTodos,
+    openModal,
+    completeCheck,
+  };
+  const stateUpdate = {
+    setSearchValue,
     completeTodo,
     addTodo,
     deleteTodo,
-    openModal,
     setOpenModal,
+    setCompleteCheck,
     synchronizeTodos,
-  }
+
+  };
+
+  return {states, stateUpdate};
       
-  
 }
 
 export { useTodos };

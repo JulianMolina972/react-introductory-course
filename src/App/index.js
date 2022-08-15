@@ -16,22 +16,26 @@ import { EmptySearch } from "../EmptySearch";
 
 
 function App() {
+  const {states, stateUpdate} = useTodos();
+
   const {
-    error, 
-    loading, 
-    searchedTodos, 
-    completeTodo, 
-    deleteTodo,
-    openModal,
-    setOpenModal,
-    totalTodos, 
+    loading,
+    error,
+    totalTodos,
     completedTodos,
-    searchValue, 
+    searchValue,
+    searchedTodos,
+    openModal,
+  } = states;
+
+  const {
     setSearchValue,
+    completeTodo,
     addTodo,
+    deleteTodo,
+    setOpenModal,
     synchronizeTodos,
-    
-  } = useTodos();
+  } = stateUpdate;
 
   return (
     <React.Fragment>
@@ -62,8 +66,10 @@ function App() {
             key={todo.text} 
             text={todo.text}
             completed={todo.completed}
-            onComplete={() => completeTodo(todo.text)}
+            onComplete={() =>  completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
+
+            // setOpenModal={setOpenModal}
           />
         )}   
       /> 
