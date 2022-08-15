@@ -40,8 +40,6 @@ function useTodos() {
     newTodos[todosIndex].completed = !newTodos[todosIndex].completed;
     saveTodos(newTodos);
 
-    // check.setCompleteCheck(prevState => !prevState);
-    // newTodos[todosIndex].completed = false;
   }
 
   const addTodo = (text) => {
